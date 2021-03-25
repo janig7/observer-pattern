@@ -10,16 +10,16 @@ class WeatherStation : public IObservable {
         void Add(IObserver *observer) override;
         void Remove(IObserver *observer) override;
         void Notify() override;
-        void CreateMessage(std::string message = "Empty");
         void HowManyObserver();
-        void setTemperature();
+        void SetState(float temperature, float pressure, float humidity);
 
 
 
     private:
         std::list <IObserver *> list_observer_;
-        std::string message_;
         float temperature;
+        float humidity;
+        float pressure;
 };
 
 #endif
