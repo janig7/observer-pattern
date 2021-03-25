@@ -12,6 +12,9 @@ all:
 weatherstation: 
 		$(CC) $(SOURCES) $(CFLAGS) -o $@
 
+run:
+	./weatherstation
+
 clean:
 	rm weatherstation
 
