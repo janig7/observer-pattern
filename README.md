@@ -7,5 +7,5 @@ of any internal state changes, and calls one of thier methods.
 
 ## File structure
 
-**src**: Application source files.
+**src**: Application source files. <br/>
 **include**: All project header files.
