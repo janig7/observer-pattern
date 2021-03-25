@@ -6,7 +6,6 @@
 
 class WeatherStation : public IObservable {
     public: 
-        virtual ~WeatherStation() {};
         void Add(IObserver *observer) override;
         void Remove(IObserver *observer) override;
         void Notify() override;

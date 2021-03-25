@@ -4,7 +4,7 @@
 class IObserver {
     public:
     virtual ~IObserver() {};
-    virtual void Update(const std::string &message_from_subject) = 0;
+    virtual void Update(float temperature, float pressure, float humidity) = 0;
 };
 
 #endif

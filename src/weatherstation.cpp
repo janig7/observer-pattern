@@ -1,4 +1,5 @@
 #include "weatherstation.h"
+#include "observer.h"
 
 void WeatherStation::Add(IObserver *observer) {
     list_observer_.push_back(observer);
@@ -27,4 +28,3 @@ void WeatherStation::SetState(float temperature, float pressure, float humidity)
     this->humidity = humidity;
     Notify();
 }
-
