@@ -31,6 +31,6 @@ of any internal state changes, and calls one of thier methods.
 **client.h**: declaration of client class <br />
 **weatherstation.h**: declaration of weatherstation class <br />
 
-## UML DIAGRAM
+## UML Diagram
 
 ![uml](https://user-images.githubusercontent.com/85672253/121580477-16376400-ca2d-11eb-835c-e8aca578fbe6.png)
