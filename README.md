@@ -18,17 +18,19 @@ of any internal state changes, and calls one of thier methods.
 **src**: Application source files. <br/>
 **include**: All project header files.
 
-## source files
+## Source files
 
 **client.cpp**: contains implementation of methods for the client class <br/>
 **weatherstation.cpp**: contains implementation of methods for the WeatherStation class <br/>
 **main.cpp**: client code - here u can deal with weatherstation :)
 
-## include files
+## Include files
 
 **observable.h**: declaration of interface for ovservables classes <br />
 **observer.h**: declaration of interface for observers classes <br />
 **client.h**: declaration of client class <br />
 **weatherstation.h**: declaration of weatherstation class <br />
+
+## UML DIAGRAM
 
 ![uml](https://user-images.githubusercontent.com/85672253/121580477-16376400-ca2d-11eb-835c-e8aca578fbe6.png)
