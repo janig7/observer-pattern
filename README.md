@@ -9,9 +9,10 @@ of any internal state changes, and calls one of thier methods.
 
     1.Clone this repo.
     2.Go into observer-pattern directory.
-    3.Run `make weatherstation` and build program.
-    4.Run `make run`.
-    5.Run `make clean` to remove executable files.
+    3.Run `make run` and run program.
+    4.Run `make docs` to generate documentation.
+    5.Run 'make test' to run tests
+    6.Run `make clean` to remove executable files.
 
 ## File structure
 
