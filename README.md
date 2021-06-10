@@ -8,7 +8,7 @@ of any internal state changes, and calls one of thier methods.
 ## Running
 
     1.Clone this repo.
-    2.Go into observer-pattern directory.
+    2.Go into observer-pattern directory and create new directory called bin.
     3.Run `make run` and run program.
     4.Run `make docs` to generate documentation.
     5.Run 'make test' to run tests
