@@ -12,7 +12,7 @@ of any internal state changes, and calls one of thier methods.
     3.Run `make run` and run program.
     4.Run `make docs` to generate documentation.
     5.Run 'make test' to run tests.
-    6.Run `make clean` to remove executable, build and documentations files.
+    6.Run `make clean` to remove executable, build and documentation files.
 
 ## File structure
 
