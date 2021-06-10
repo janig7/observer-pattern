@@ -2,7 +2,10 @@
 #define _OBSERVABLE_H
 #include "observer.h"
 
-// Interfejs  dla klas rozglaszajacych
+///
+/// Interfejs  dla klas rozglaszajacych
+///
+
 class IObservable {
     public:
     // virtual ~IObservable() {};
