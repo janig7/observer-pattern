@@ -36,7 +36,7 @@ class WeatherStation : public IObservable {
         @param temperature zmiennoprzecinkowa liczba oznaczająca temperature
         @param pressure zmiennoprzecinkowa liczba okreslajaca cisnienie
         @param humidity zmiennoprzecinkowa liczba określająca wilgotnosc
-        @return voide 
+        @return void 
         */
         void SetState(float temperature, float pressure, float humidity);
 
