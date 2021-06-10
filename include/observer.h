@@ -1,7 +1,10 @@
 #ifndef _OBSERVER_H
 #define _OBSERVER_H
 
-// Interfejs wykorzystywany dla klas klienckich
+///
+/// Interfejs wykorzystywany dla klas klienckich
+///
+
 class IObserver {
     public:
     virtual ~IObserver() {};
