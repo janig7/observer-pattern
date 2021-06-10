@@ -4,8 +4,8 @@ SRCDIR := src
 BUILDDIR := build
 INC := -I include
 TARGET := bin/WeatherStation
-TESTDIR := test/test.cpp
 TEST := bin/test
+DOCS:= docs
 
 SRCEXT := cpp
 SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
@@ -22,20 +22,20 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 
 clean:
 	@echo " Cleaning...";
-	@echo " $(RM) -r $(BUILDDIR) $(TARGET)"; $(RM) -r $(BUILDDIR) $(TARGET)
+	@echo " $(RM) -r $(BUILDDIR) $(TARGET) $(TEST)"; $(RM) -r $(BUILDDIR) $(TARGET) $(TEST) $(DOCS)/html $(DOCS)/latex
 
 run:
 ifneq ("$(wildcard $(TARGET))", "$(TARGET)")
-	@echo "Linking..."; make
+	@echo " Linking..."; make
 endif
-	@echo "Starting program"; ./${TARGET}
+	@echo " Starting program"; ./${TARGET}
 
+.PHONY: docs
 docs:
-	@echo "Generating documentation...";
-	@doxygen
-	@open doxygen/html/index.html
+	@echo " Generating documentation...";
+	@doxygen $(DOCS)/Doxyfile
+	@open $(DOCS)/html/index.html
 
 test:
-	@echo "Building testfiles...";
-	@echo "$(CC) -o $(TEST) $(TESTDIR) -Icppnit";
-	@echo "Starting test program"; ./${TEST}
+	@echo " Linking..."; make
+	@echo " Starting test program"; ./${TEST}
