@@ -11,8 +11,8 @@ of any internal state changes, and calls one of thier methods.
     2.Go into observer-pattern directory and create new directory called bin.
     3.Run `make run` and run program.
     4.Run `make docs` to generate documentation.
-    5.Run 'make test' to run tests
-    6.Run `make clean` to remove executable files.
+    5.Run 'make test' to run tests.
+    6.Run `make clean` to remove executable, build and documentations files.
 
 ## File structure
 
