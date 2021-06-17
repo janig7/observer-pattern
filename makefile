@@ -3,14 +3,16 @@ CC := g++
 SRCDIR := src
 BUILDDIR := build
 INC := -I include
+INCT := -I./ -I src -I include -I../opt/gtest/include
 TARGET := bin/WeatherStation
-TEST := bin/test
 DOCS:= docs
 
 SRCEXT := cpp
 SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
 OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
-CFLAGS := -std=c++14 -Wall -Wextra -pedantic-errors
+CFLAGS := -std=c++0x -Wall -Wextra -pedantic-errors
+CXXFLAGS := -std=c++0x -g -L/opt/gtest/lib -lgtest -lgtest_main -lpthread
+TESTOBJ := tests/MAIN_TEST.o ../src/client.o main.o weathertation.o
 
 $(TARGET): $(OBJECTS)
 	@echo " Linking...";
@@ -36,6 +38,8 @@ docs:
 	@doxygen $(DOCS)/Doxyfile
 	@open $(DOCS)/html/index.html
 
-test:
-	@echo " Linking..."; make
-	@echo " Starting test program"; ./${TEST}
+test: $(TESTOBJ)
+	$(CC) $(CXXFLAGS) $(INCT) -o tests MAIN_TEST.cpp $(TESTOBJ)
+
+.cpp.o:
+	$(CC) $(CXXFLAGS) -c $< -o $@ $(INCT)
