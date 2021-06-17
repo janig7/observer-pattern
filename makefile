@@ -3,7 +3,7 @@ CC := g++
 SRCDIR := src
 BUILDDIR := build
 INC := -I include
-INCT := -I./ -I src -I include -I../opt/gtest/include
+INCT := -I./ -I src -I include -I/opt/gtest/include
 TARGET := bin/WeatherStation
 DOCS:= docs
 
@@ -12,7 +12,7 @@ SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
 OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
 CFLAGS := -std=c++0x -Wall -Wextra -pedantic-errors
 CXXFLAGS := -std=c++0x -g -L/opt/gtest/lib -lgtest -lgtest_main -lpthread
-TESTOBJ := tests/MAIN_TEST.o ../src/client.o main.o weathertation.o
+TESTOBJ := tests/MAIN_TEST.o src/client.o src/main.o src/weatherstation.o
 
 $(TARGET): $(OBJECTS)
 	@echo " Linking...";
@@ -39,7 +39,12 @@ docs:
 	@open $(DOCS)/html/index.html
 
 test: $(TESTOBJ)
-	$(CC) $(CXXFLAGS) $(INCT) -o tests MAIN_TEST.cpp $(TESTOBJ)
+	$(CC) $(CXXFLAGS) $(INCT) -o bin/TEST tests/MAIN_TEST.cpp $(TESTOBJ)
+	./bin/TEST
+#	@RM src/*.o tests/*.o bin/TEST
 
-.cpp.o:
+%.o: %.$(SRCEXT)
 	$(CC) $(CXXFLAGS) -c $< -o $@ $(INCT)
+#delete later
+rm:
+	@RM src/*.o tests/*.o
