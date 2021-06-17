@@ -39,3 +39,9 @@ of any internal state changes, and calls one of thier methods.
 ## UML Diagram
 
 ![uml](https://user-images.githubusercontent.com/85672253/121580477-16376400-ca2d-11eb-835c-e8aca578fbe6.png)
+
+## Test framework
+
+[Google Test](https://github.com/google/googletest)
+
+Make sure that you have installed this framework
