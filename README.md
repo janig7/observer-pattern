@@ -19,7 +19,7 @@ of any internal state changes, and calls one of thier methods.
 
 **src**: Application source files. <br/>
 **include**: All project header files.
-**bin**: Created by user, executable files.
+**bin**: Executable files.
 **docs**: Doxyfile and generated documentation files
 **build**: Temp build location
 
