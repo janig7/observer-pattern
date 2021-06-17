@@ -44,8 +44,6 @@ class WeatherStation : public IObservable {
         void SetState(float temperature, float pressure, float humidity);
 
 
-
-    private:
         std::list <IObserver *> list_observer_;
         float temperature;
         float humidity;
