@@ -14,8 +14,8 @@ struct WeatherStationTest : public testing::Test {
     server = new WeatherStation();
     client1 = new Client(*server);
     }
-    void TearDown() { 
-    delete server; 
+    void TearDown() {
+    delete server;
     delete client1;
     }
 };
@@ -29,11 +29,11 @@ TEST_F(WeatherStationTest, Set){
 
   ASSERT_EQ(server->temperature, 23.5);
   ASSERT_EQ(server->pressure, 115.4);
-  ASSERT_EQ(server->humidity, 23.5)
+  ASSERT_EQ(server->humidity, 23.5);
 }
 
 TEST_F(WeatherStationTest, Remove_client ){
-  server->remove(client1);
+  server->Remove(client1);
 
   ASSERT_EQ(server->list_observer_.size(), 1);
 }
