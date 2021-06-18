@@ -12,7 +12,7 @@ SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
 OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
 CFLAGS := -std=c++0x -Wall -Wextra -pedantic-errors
 CXXFLAGS := -std=c++0x -g -L/opt/gtest/lib -lgtest -lgtest_main -lpthread
-TESTOBJ := tests/MAIN_TEST.o src/client.o src/main.o src/weatherstation.o
+TESTOBJ := tests/MAIN_TEST.o src/client.o src/weatherstation.o
 
 $(TARGET): $(OBJECTS)
 	@echo " Linking...";
