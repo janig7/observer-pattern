@@ -18,10 +18,10 @@ of any internal state changes, and calls one of thier methods.
 ## File structure
 
 **src**: Application source files. <br/>
-**include**: All project header files.
-**bin**: Executable files.
-**docs**: Doxyfile and generated documentation files
-**build**: Temp build location
+**include**: All project header files. <br/>
+**bin**: Executable files. <br/>
+**docs**: Doxyfile and generated documentation files. <br/>
+**build**: Temp build location. <br/>
 
 ## Source files
 
