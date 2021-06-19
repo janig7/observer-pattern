@@ -8,12 +8,11 @@ of any internal state changes, and calls one of thier methods.
 ## Running
 
     1.Clone this repo.
-    2.Go into observer-pattern directory and create new directory called bin.
-    3.Run `make run` to build and run program.
-    4.Run `make` to build program.
-    5.Run `make docs` to generate documentation.
-    7.Run 'make test' to run tests.
-    8.Run `make clean` to remove executables, build folder and documentation files.
+    2.Run `make run` to build and run program.
+    3.Run `make` to build program.
+    4.Run `make docs` to generate documentation.
+    5.Run 'make test' to run tests.
+    6.Run `make clean` to remove executables, build folder and documentation files.
 
 ## File structure
 
