@@ -36,7 +36,7 @@ endif
 docs:
 	@echo " Generating documentation...";
 	@doxygen $(DOCS)/Doxyfile
-	@open $(DOCS)/html/index.html
+	@open $(DOCS)/html/md__r_e_a_d_m_e.html
 
 test: $(TESTOBJ)
 	$(CC) $(CXXFLAGS) $(INCT) -o bin/TEST tests/MAIN_TEST.cpp $(TESTOBJ)
